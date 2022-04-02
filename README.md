@@ -10,6 +10,8 @@ https://theajack.gitee.io/message-board?app=xxx
 
 app 为您的应用id
 
+----
+
 github地址
 
 ```
