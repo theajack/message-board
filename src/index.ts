@@ -16,7 +16,8 @@ function main () {
     initComment({
         el,
         urlConfig: {
-            host: 'localhost:8080', // View https://github.com/theajack/comment for details
+            host: 'www.shiyix.cn',
+            // host: 'localhost:8080', // View https://github.com/theajack/comment for details
             get: '/api/message',
             insert: '/api/message',
             reply: '/api/message/reply',
