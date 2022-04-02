@@ -1,36 +1,17 @@
-### typescript运行环境demo
+### 留言板
 
-这是一个支持eslint的typescript运行环境
+无须自己搭建服务器，一个链接开启您的留言板
 
-只需要克隆，安装依赖就可以运行起来了，毕竟webpack、eslint、babel、ts的配置搞起来还是比较麻烦的～
-
-在你喜欢的目录运行：
+使用方式：
 
 ```
-git clone https://github.com/theajack/ts-demo.git
+https://theajack.gitee.io/message-board?app=xxx
 ```
 
-```
-cd ts-demo
-```
+app 为您的应用id
 
-使用淘宝镜像安装依赖
+github地址
 
 ```
-npm i --registry=https://registry.npm.taobao.org
+https://theajack.github.io/message-board?app=xxx
 ```
-
-使用 webpack-dev-server 运行demo
-
-```
-npm run dev
-```
-
-打包：
-
-```
-npm run build
-```
-
-
-项目中有一些用不到的东西可以删除，代码就不介绍了，后面就到你自己发挥啦！
