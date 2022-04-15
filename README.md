@@ -16,6 +16,12 @@
 使用方式：
 
 ```
+https://shiyix.cn/p/message-board?app=xxx
+```
+
+或
+
+```
 https://theajack.gitee.io/message-board?app=xxx
 ```
 
