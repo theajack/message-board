@@ -35,12 +35,23 @@ function initUI () {
     doc.body.setAttribute('style', 'max-width: 1000px;margin: 0 auto;');
 
     const title = doc.createElement('div');
-    title.setAttribute('style', `font-size: 30px; font-weight: bold; text-align: center;margin: 15px 0;`);
-    title.innerText = 'Message Board';
+
+    const mainTitle = doc.createElement('div');
+    mainTitle.setAttribute('style', `text-align: center;margin-top: 15px;`);
+
+    const mainTitleText = doc.createElement('span');
+
+    mainTitleText.setAttribute('style', `font-size: 30px; font-weight: bold; text-decoration: underline;cursor: pointer;`);
+    mainTitleText.addEventListener('click', () => {
+        window.open('https://github.com/theajack/message-board/');
+    });
+    mainTitleText.innerText = 'Message Board';
+    mainTitle.appendChild(mainTitleText);
+    title.appendChild(mainTitle);
 
     const subTitle = doc.createElement('div');
     subTitle.innerText = `app:${app}`;
-    subTitle.setAttribute('style', `font-size: 16px;font-weight: normal;color: #666;`);
+    subTitle.setAttribute('style', `font-size: 16px;text-align: center;margin-bottom: 15px; color: #666;`);
 
     title.appendChild(subTitle);
     doc.body.appendChild(title);
