@@ -1,32 +1,16 @@
 
-import initComment from 'tc-comment';
+import {initComment} from 'tc-comment';
 import {getUrlParam} from './util';
 
-const app = decodeURIComponent(getUrlParam('app', 'message-board') as string);
-
-const dataHandler = (data: Record<string, any>) => {
-    data.app = app;
-    return data;
-};
+const app = decodeURIComponent(getUrlParam('app', 'common') as string);
 
 function main () {
     initUI();
     const el = window.document.createElement('div');
     window.document.body.appendChild(el);
     initComment({
+        appName: 'message-board/' + app,
         el,
-        urlConfig: {
-            host: 'www.shiyix.cn',
-            // host: 'localhost:8080', // View https://github.com/theajack/comment for details
-            get: '/api/message',
-            insert: '/api/message',
-            reply: '/api/message/reply',
-        },
-        dataHandler: {
-            get: dataHandler,
-            insert: dataHandler,
-            reply: dataHandler,
-        }
     });
 };
 
